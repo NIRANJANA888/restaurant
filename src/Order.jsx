@@ -15,7 +15,6 @@ export default function Order() {
       if (!fetch) {
         foods.forEach(element => {
           const item = localStorage.getItem(element.name);
-          console.log('item' + item)
           if (item !== '0'){
             setItems(prev => [...prev, element])  
             setPrice(prev => prev + element.price * Number(item))
